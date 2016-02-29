@@ -1,4 +1,4 @@
-@import "_variables";
+@import "_variables"
 
 /**
  * reset global
@@ -16,12 +16,12 @@ html, body {
 /**
  * responsive breaks
  */
-$break-level-1: 320px;
-$break-level-2: 414px;
-$break-level-3-1: 680px;
-$break-level-3: 768px;
-$break-level-4: 900px; // > 900px timeline will work.
-$break-level-5: 980px;
+$break-level-1 = 320px;
+$break-level-2 = 414px;
+$break-level-3-1 = 680px;
+$break-level-3 = 768px;
+$break-level-4 = 900px; // > 900px timeline will work.
+$break-level-5 = 980px;
 
 /* 980px work fine */
 
@@ -279,9 +279,9 @@ nav {
     }
 }
 
-$outer-circle-radius: 10px;
-$inner-circle-radius: 8px;
-$post-time-space: 1em;
+$outer-circle-radius = 10px;
+$inner-circle-radius = 8px;
+$post-time-space = 1em;
 .post-entry {
     font-size: 16px;
     line-height: 1.5;
@@ -332,12 +332,12 @@ $post-time-space: 1em;
             height: 20px;
             background: #666; // #333 with opacity 0.75
             border-radius: 100%;
-            left: calc(100% + 1rem + #{$vertical-bar-width}/2 - #{$outer-circle-radius});
-            top: calc(50% - #{$outer-circle-radius});
+            left: 'calc(100% + 1rem + %s - %s)' % ($vertical-bar-width/2 $outer-circle-radius);
+            top: 'calc(50% - %s)' % ($outer-circle-radius);
 
             @media only screen and (max-width: $break-level-4) {
                 content: none;
-                left: calc(-#{$post-time-space} - #{$outer-circle-radius});
+                left: 'calc(-%s - %s)' % ($post-time-space $outer-circle-radius);
             }
 
         }
@@ -350,12 +350,12 @@ $post-time-space: 1em;
             background: #FCF9E8;
             border-radius: 100%;
             transition: background-color .2s ease-in-out;
-            left: calc(100% + 1rem + #{$vertical-bar-width}/2 - #{$inner-circle-radius});
-            top: calc(50% - #{$inner-circle-radius});
+            left: 'calc(100% + 1rem + %s - %s)' % ($vertical-bar-width/2 $inner-circle-radius);
+            top: 'calc(50% - %s)' % ($inner-circle-radius);
 
             @media only screen and (max-width: $break-level-4) {
                 content: none;
-                left: calc(-#{$post-time-space} - #{$inner-circle-radius});
+                left: 'calc(-%s - %s)' % ($post-time-space $inner-circle-radius);
             }
         }
     }
@@ -373,7 +373,7 @@ $post-time-space: 1em;
 
     .post-desc {
         flex: 1;
-        //padding-left: calc(1rem + #{$vertical-bar-width});
+        //padding-left: 'calc(1rem + %s)' % ($vertical-bar-width);
 
 
         // style for post-title
