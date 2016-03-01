@@ -5,14 +5,14 @@ menu:
   Archives: archives
 
 social:
-  email:
+  email: ooiss@qq.com
   twitter:
-  github:
+  github: iamcco
   googleplus:
   rss: /atom.xml
 
 # Content
 fancybox: true # set to true if you want to use it
 
-duoshuo: #duoshuo_shortname
+duoshuo: yuukocn
 disqus: #disqus _shortname
